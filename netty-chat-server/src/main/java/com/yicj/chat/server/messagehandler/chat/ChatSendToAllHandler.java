@@ -23,7 +23,8 @@ public class ChatSendToAllHandler implements MessageHandler<ChatSendToAllRequest
         channel.writeAndFlush(new Invocation(ChatSendResponse.TYPE, sendResponse));
 
         // 创建转发的消息，并广播发送
-        ChatRedirectToUserRequest sendToUserRequest = new ChatRedirectToUserRequest().setMsgId(message.getMsgId())
+        ChatRedirectToUserRequest sendToUserRequest = new ChatRedirectToUserRequest()
+                .setMsgId(message.getMsgId())
                 .setContent(message.getContent());
         nettyChannelManager.sendAll(new Invocation(ChatRedirectToUserRequest.TYPE, sendToUserRequest));
     }

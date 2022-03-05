@@ -19,11 +19,14 @@ public class ChatSendToOneHandler implements MessageHandler<ChatSendToOneRequest
     @Override
     public void execute(Channel channel, ChatSendToOneRequest message) {
         // 这里，假装直接成功
-        ChatSendResponse sendResponse = new ChatSendResponse().setMsgId(message.getMsgId()).setCode(0);
+        ChatSendResponse sendResponse = new ChatSendResponse()
+                .setMsgId(message.getMsgId())
+                .setCode(0);
         channel.writeAndFlush(new Invocation(ChatSendResponse.TYPE, sendResponse));
 
         // 创建转发的消息，发送给指定用户
-        ChatRedirectToUserRequest sendToUserRequest = new ChatRedirectToUserRequest().setMsgId(message.getMsgId())
+        ChatRedirectToUserRequest sendToUserRequest = new ChatRedirectToUserRequest()
+                .setMsgId(message.getMsgId())
                 .setContent(message.getContent());
         nettyChannelManager.send(message.getToUser(), new Invocation(ChatRedirectToUserRequest.TYPE, sendToUserRequest));
     }
