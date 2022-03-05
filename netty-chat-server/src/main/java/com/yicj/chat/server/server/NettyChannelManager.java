@@ -1,4 +1,4 @@
-package com.yicj.chat.server.message.server;
+package com.yicj.chat.server.server;
 
 import com.yicj.chat.common.codec.Invocation;
 import io.netty.channel.Channel;

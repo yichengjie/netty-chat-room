@@ -1,8 +1,9 @@
-package com.yicj.chat.server.message.server.handler;
+package com.yicj.chat.server.server.handler;
 
 import com.yicj.chat.common.codec.InvocationDecoder;
 import com.yicj.chat.common.codec.InvocationEncoder;
 import com.yicj.chat.common.dispatcher.MessageDispatcher;
+import com.yicj.chat.server.server.handler.NettyServerHandler;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
