@@ -1,6 +1,6 @@
-package com.yicj.chat.server.message.server.handler;
+package com.yicj.chat.server.server.handler;
 
-import com.yicj.chat.server.message.server.NettyChannelManager;
+import com.yicj.chat.server.server.NettyChannelManager;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

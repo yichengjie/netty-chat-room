@@ -1,6 +1,6 @@
-package com.yicj.chat.server.message.server;
+package com.yicj.chat.server.server;
 
-import com.yicj.chat.server.message.server.handler.NettyServerHandlerInitializer;
+import com.yicj.chat.server.server.handler.NettyServerHandlerInitializer;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
